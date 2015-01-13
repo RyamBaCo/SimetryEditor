@@ -1,1 +1,2 @@
-# SimetryEditor
+# Simetry Editor Code
+This is the code for the level editor of the computer game Simetry. It offers a lot of features such as scaling or grouping of level elements or the creation of complex actions, which can be executed sequentially or simultaneously. In order to run you need <a href="http://james.newtonking.com/json">Json.net</a>, <a href="http://objectlistview.sourceforge.net/">ObjectListView</a> and <a href="https://msxna.codeplex.com/">XNA</a>.
