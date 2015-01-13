@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{890C7468-DCEF-4B47-86B6-07A4F201B9DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimetrySerializationInterface</RootNamespace>
+    <AssemblyName>SimetrySerializationInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MONOGAME_PATH)v3.0\Assemblies\WindowsGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActionDelegateDefinitions.cs" />
+    <Compile Include="Actions\ActionPlayAnimation.cs" />
+    <Compile Include="Actions\ActionMoveGameObject.cs" />
+    <Compile Include="Actions\BaseAction.cs" />
+    <Compile Include="Actions\ActionPlayAnimationReverse.cs" />
+    <Compile Include="Actions\ActionArriveCheckpoint.cs" />
+    <Compile Include="Actions\ActionSetSliceState.cs" />
+    <Compile Include="Actions\ActionRotateGameObject.cs" />
+    <Compile Include="Actions\ActionZoomCamera.cs" />
+    <Compile Include="Actions\ActionAllowBuilding.cs" />
+    <Compile Include="Actions\ActionSetWanderSliceState.cs" />
+    <Compile Include="Actions\ActionAllow.cs" />
+    <Compile Include="Actions\ActionAllowWeaponReel.cs" />
+    <Compile Include="Actions\ActionAllowBuildingHeavySlices.cs" />
+    <Compile Include="Actions\ActionAllowCollecting.cs" />
+    <Compile Include="Actions\ActionEnableDisable.cs" />
+    <Compile Include="Actions\ActionDelay.cs" />
+    <Compile Include="Actions\ActionSpawnQuad.cs" />
+    <Compile Include="Actions\ActionPlaySound.cs" />
+    <Compile Include="Actions\ActionDestroyAllVisibleSlices.cs" />
+    <Compile Include="Actions\ActionSpawnTriangle.cs" />
+    <Compile Include="Actions\ActionScaleAndMoveToPlayer.cs" />
+    <Compile Include="Actions\ActionShowFullscreenTexture.cs" />
+    <Compile Include="Actions\ActionChangeAmbientLight.cs" />
+    <Compile Include="Actions\ActionSetIsTutorial.cs" />
+    <Compile Include="Actions\ActionDestroySlicesInTriggerZone.cs" />
+    <Compile Include="Serialization\BackgroundValue.cs" />
+    <Compile Include="Serialization\PointLightValue.cs" />
+    <Compile Include="Serialization\MetadataGameObjectValue.cs" />
+    <Compile Include="Serialization\GameObjectValue.cs" />
+    <Compile Include="Globals\GameObjectValueManager.cs" />
+    <Compile Include="Globals\GlobalIDs.cs" />
+    <Compile Include="Serialization\IGlobalJunkValueAdder.cs" />
+    <Compile Include="Serialization\ITriggerZoneAdder.cs" />
+    <Compile Include="Serialization\IMetadataGameObjectAdder.cs" />
+    <Compile Include="Serialization\FormValue.cs" />
+    <Compile Include="Serialization\IFormAdder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Globals\SerializationConstants.cs" />
+    <Compile Include="Serialization\GlobalJunkValue.cs" />
+    <Compile Include="Serialization\SerializationManager.cs" />
+    <Compile Include="Serialization\SliceValue.cs" />
+    <Compile Include="Serialization\SpecialSliceValue.cs" />
+    <Compile Include="Serialization\TriggerZoneValue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Third Party\Json.NET\Source\Src\Newtonsoft.Json\Newtonsoft.Json.Net40.csproj">
+      <Project>{A9AE40FF-1A21-414A-9FE7-3BE13644CC6D}</Project>
+      <Name>Newtonsoft.Json.Net40</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
